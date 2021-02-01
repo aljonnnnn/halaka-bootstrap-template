@@ -8,7 +8,7 @@
     --text-color: #444;
     --background: #f3f5fa;
     --nav-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+    --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
 }
 
 * {
@@ -146,6 +146,11 @@ section{
 }
 .m-l-40{
     margin-left: 2.5rem;
+}
+
+/* right */
+.m-r-15{
+    margin-right: 0.9375rem;
 }
 
 /* section title */
@@ -480,6 +485,46 @@ section{
 
 /* Project section end */
 
+/* Team section start */
+
+.team{
+    background: var(--background);
+}
+
+.team .team-item{
+    padding: 20px;
+    background: var(--white-color);
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+    font-family: 'Nunito', sans-serif;
+}
+
+.team .team-item .team-details{
+    padding: 0 20px;
+}
+
+.team .team-item .team-details h5{
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.team .team-item .team-details p{
+    font-size: 14px;
+    line-height: 19px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.team .team-item .team-details .social-icon{
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.team .team-item .team-details .social-icon:hover{
+    transform: translateY(-3px);
+}
+
+
+/* Team section end */
 /* 
 container  laptop / large tablet width 1260px
 container small tablet 992px
