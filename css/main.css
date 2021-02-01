@@ -27,6 +27,10 @@ img {
     vertical-align: middle;    
 }
 
+.img-100{
+    width: 100%;
+}
+
 ul {
     list-style: none;
 }
@@ -48,6 +52,7 @@ p{
     font-weight: 400;
     line-height: 1.625rem;
     margin: 0;
+    color: var(--text-color) !important;
 }
 
 .hero-p{
@@ -92,20 +97,38 @@ section{
 
 /* color */
 .white{
-    color: var(--white-color);
+    color: var(--white-color) !important;
 }
+
+.primary-color{
+    color: var(--primary-color);
+}
+
 /* margin */
+
+/* top */
 .m-t-25{
     margin-top: 1.5625rem;
 }
+
+/* bottom */
+.m-b-6{
+    margin-bottom: 0.375rem;
+}
 .m-b-10{
     margin-bottom: 0.625rem;
+}
+.m-b-15{
+    margin-bottom: 0.9375rem;
 }
 .m-b-20{
     margin-bottom: 1.25rem;
 }
 .m-b-25{
     margin-bottom: 1.5625rem;
+}
+.m-b-30{
+    margin-bottom: 1.875rem;
 }
 .m-b-40{
     margin-bottom: 2.5rem;
@@ -116,6 +139,8 @@ section{
 .m-b-60{
     margin-bottom: 3.75rem;
 }
+
+/* left */
 .m-l-10{
     margin-left: 0.625rem;
 }
@@ -384,7 +409,76 @@ section{
 .services .services-box .details-box a:hover img{
     opacity: 0.8;
 }
+
 /* services section end */
+
+/* CTA section start */
+
+.cta{
+    padding: 40px 0;
+    background-image: url(../img/CTA-background.jpg);
+}
+.cta .cta-box{
+    background-color: var(--white-color);
+    padding: 1.875rem;
+    border-radius: 5px;
+}
+
+/* CTA section end */
+
+/* Project section start */
+
+.project .project-box{
+    position: relative;
+}
+
+.project .project-box::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(71, 178, 228, 0.7);
+    z-index: 1;
+    display: none;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project .project-box .project-hover{
+    background-color: var(--white-color);
+    border-radius: 5px;
+    padding: 0.625rem;
+    position: absolute;
+    left: 1.125rem;
+    right: 1.125rem;
+    bottom: 1.125rem;
+    z-index: 1000;
+    transform: translateX(-50px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.project .project-box:hover .project-hover{
+    transform: translateX(0px);
+    opacity: 1;
+}
+.project .project-box:hover::after{
+    display: block;
+    opacity: 1;
+}
+
+.project .project-box .project-hover span{
+    font-size: 20px;
+}
+
+.project .project-box .project-hover p{
+    line-height: 22px;
+    font-size: 14px;
+}
+
+/* Project section end */
 
 /* 
 container  laptop / large tablet width 1260px
