@@ -2,10 +2,12 @@
 
 :root{
     --primary-color: #47B2E4;
-    --secondar-color: ##37517e;
+    --secondar-color: #37517e;
     --white-color: #fff;
     --black-color: #111;
     --text-color: #444;
+    --list-check: #999999;
+    --list-uncheck: #cccccc;
     --background: #f3f5fa;
     --nav-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
@@ -102,6 +104,14 @@ section{
 
 .primary-color{
     color: var(--primary-color);
+}
+
+.list-check{
+    color: var(--list-check);
+}
+
+.list-uncheck{
+    color: var(--list-uncheck);
 }
 
 /* margin */
@@ -480,7 +490,7 @@ section{
 
 .project .project-box .project-hover p{
     line-height: 22px;
-    font-size: 14px;
+    font-size: 0.875rem;
 }
 
 /* Project section end */
@@ -489,6 +499,13 @@ section{
 
 .team{
     background: var(--background);
+}
+
+.team .col-md-6{
+    transition: all 0.5s ease;
+}
+.team .col-md-6:hover{
+    transform: translateY(-5px);
 }
 
 .team .team-item{
@@ -500,16 +517,17 @@ section{
 }
 
 .team .team-item .team-details{
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .team .team-item .team-details h5{
+    color: var(--secondar-color);
     font-weight: 700;
     margin-bottom: 7px;
 }
 
 .team .team-item .team-details p{
-    font-size: 14px;
+    font-size: 0.875rem;
     line-height: 19px;
     font-family: 'Nunito', sans-serif;
 }
@@ -525,6 +543,46 @@ section{
 
 
 /* Team section end */
+
+/* Pricing section start */
+
+.pricing .pricing-plan{
+    padding: 3.75rem 1.875rem;
+    border-radius: 5px;
+    box-shadow: var(--box-shadow);
+}
+
+.pricing .pricing-plan .pricing-price{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.pricing .pricing-plan .pricing-price .currency{
+    font-size: 1.25rem;
+    margin-top: 10px;
+}
+.pricing .pricing-plan .pricing-price .price{
+    color: var(--black-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 3rem;
+}
+.pricing .pricing-plan .pricing-price .period{
+    color: var(--primary-color);
+    font-size: 1.125rem;
+    font-weight: 700;
+    display: block;
+    width: 100%;
+}
+.pricing-body ul li{
+    font-size: 1rem;
+    line-height: 22px;
+}
+.pricing-body ul li img{
+    margin: 0 1.25rem 0.1875rem 0.3125rem;
+}
+
+/* Pricing section end */
+
 /* 
 container  laptop / large tablet width 1260px
 container small tablet 992px
