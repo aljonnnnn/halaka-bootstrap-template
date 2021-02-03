@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap');
 
 :root{
+    /* color */
     --primary-color: #47B2E4;
     --secondar-color: #37517e;
     --white-color: #fff;
@@ -11,15 +12,22 @@
     --background: #f3f5fa;
     --nav-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     --box-shadow: 0 2px 15px rgba(0, 0, 0, 0.07);
+
+    /* font */
+    --font-family-one: 'Nunito', sans-serif;
+    --font-family-two: 'Open Sans', sans-serif
 }
 
+/* resets */
 * {
     margin: 0;
     padding: 0;
     outline: none !important;
 }
 
-
+a{
+    text-decoration: none;
+}
 a:hover{
     text-decoration: none;
 }
@@ -38,7 +46,7 @@ ul {
 }
 
 h1, h2, h3, h4, h5, h6{
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-family-one);
     color: var(--black-color);
     font-weight: 700;
     margin: 0;
@@ -49,7 +57,7 @@ h4, h5, h6{
 }
 
 p{
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family-two);
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.625rem;
@@ -60,7 +68,7 @@ p{
 .hero-p{
     color: var(--text-color);
     font-family: 'Nunito', sans-serif;
-    font-size: 24px;
+    font-size: 1.5rem;
     font-weight: 700;
 }
 
@@ -89,13 +97,46 @@ h6{
 }
 
 body{
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family-two);
     font-weight: 400;
     color: var(--text-color);
 }
 
 section{
     padding: 3.75rem 0;
+}
+
+/* button */
+.btn{
+    padding: 0.625rem 1.5625rem;
+    border-radius: 30px;
+}
+.btn:focus{
+    box-shadow: none;
+}
+
+.btn-primary{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-primary:hover{
+    opacity: 0.9;
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+}
+
+.btn-secondary{
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background-color: transparent;
+}
+
+.btn-secondary:hover{
+    color: var(--white-color);
+    background-color: var(--primary-color);
+    border: 1px solid var(--primary-color);
 }
 
 /* color */
@@ -202,7 +243,7 @@ section{
 }
 
 .header .nav .logo{
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-family-one);
     color: var(--text-color);
     font-size: 1.875rem;
     font-weight: 600;
@@ -289,7 +330,7 @@ section{
 
 /* hero section start */
 .hero{
-    padding: 10.1875rem 0;
+    padding: 163px 0;
     height: 80vh;
 }
 
@@ -313,15 +354,15 @@ section{
     background: var(--background);
 }
 
-.company .img-box{
+.company .img-box-item{
     margin: 0 0.9375rem 1.25rem;
 }
 
-.company .img-box img{
+.company .img-box-item img{
     transition: all 0.3s ease;
 }
 
-.company .img-box img:hover{
+.company .img-box-item img:hover{
     transform: scale(1.2);
 }
 
@@ -383,7 +424,7 @@ section{
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
 }
 
 /* about us two section end */
@@ -433,7 +474,7 @@ section{
 }
 
 .services .services-box .details-box p{
-    line-height: 22px;
+    line-height: 1.375rem;
 }
 
 .services .services-box .details-box a{
@@ -454,7 +495,7 @@ section{
 /* CTA section start */
 
 .cta{
-    padding: 40px 0;
+    padding: 2.5rem 0;
     background-image: url(../img/CTA-background.jpg);
 }
 .cta .cta-box{
@@ -509,11 +550,11 @@ section{
 }
 
 .project .project-box .project-hover span{
-    font-size: 20px;
+    font-size: 1.25rem;
 }
 
 .project .project-box .project-hover p{
-    line-height: 22px;
+    line-height: 1.375rem;
     font-size: 0.875rem;
 }
 
@@ -537,7 +578,7 @@ section{
     background: var(--white-color);
     border-radius: 5px;
     box-shadow: var(--box-shadow);
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-family-one);
 }
 
 .team .team-item .team-details{
@@ -552,8 +593,8 @@ section{
 
 .team .team-item .team-details p{
     font-size: 0.875rem;
-    line-height: 19px;
-    font-family: 'Nunito', sans-serif;
+    line-height: 1.1875rem;
+    font-family: var(--font-family-one);
 }
 
 .team .team-item .team-details .social-icon{
@@ -587,7 +628,7 @@ section{
 }
 .pricing .pricing-plan .pricing-price .price{
     color: var(--black-color);
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-family-one);
     font-size: 3rem;
 }
 .pricing .pricing-plan .pricing-price .period{
@@ -599,7 +640,7 @@ section{
 }
 .pricing-body ul li{
     font-size: 1rem;
-    line-height: 22px;
+    line-height: 1.375rem;
 }
 .pricing-body ul li img{
     margin: 0 1.25rem 0.1875rem 0.3125rem;
@@ -628,7 +669,7 @@ section{
 
 .faq button{
     color: var(--primary-color);
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 600;
     padding: 0;
 }
@@ -646,7 +687,7 @@ section{
     color: var(--text-color);
     font-size: 1rem;
     font-weight: 400;
-    line-height: 26px;
+    line-height: 1.625rem;
 }
 
 /* FAQ section end */
@@ -675,7 +716,7 @@ padding: 0.625rem;
 
 .contact .contact-form .form-control{
     height: 3.125rem;
-    padding: 14px 24px;
+    padding: 0.875rem 1.5rem;
     border: 1px solid var(--background);
     border-radius: 30px;
     color: var(--text-color);
@@ -691,7 +732,7 @@ padding: 0.625rem;
 .contact .contact-form textarea.form-control{
     height: 8.75rem;
     resize: none;
-    padding-top: 12px;
+    padding-top: 0.75rem;
 }
 
 
@@ -711,11 +752,10 @@ padding: 0.625rem;
 
 .newsletter .form-item .form-control{
     display: inline-block;
-    height: 3.125rem;
     padding: 0.875rem 1.5rem;
     background-color: transparent;
     border: none;
-    width: calc(100% - 130px);
+    width: calc(100% - 8.125rem);
 }
 
 
@@ -739,8 +779,9 @@ padding: 0.625rem;
 }
 
 .footer .footer-item .logo{
+    display: inline-block;
     color: var(--black-color);
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-family-one);
     font-size: 1.75rem;
     font-weight: 600;
 }
@@ -756,7 +797,7 @@ padding: 0.625rem;
 
 .footer .footer-item .link-title{
     font-weight: 700;
-    margin-bottom: 2re;
+    margin-bottom: 2rem;
 }
 
 .footer .footer-item ul li{
@@ -779,7 +820,7 @@ padding: 0.625rem;
 
 .footer .credits{
     color: var(--black-color);
-    font-family: 'Nunito', sans-serif;
+    font-family: var(--font-family-one);
     font-size: 1rem;
     padding: 1.25rem 0;
     border-top: 1px solid var(--background);
@@ -846,7 +887,16 @@ container mobile 540px
 }
 
 @media (max-width: 576px){
+    /* margin */
     .m-b-sm-40{
         margin-bottom: 2.5rem;
+    }
+
+    /* order */
+    .order-sm-one{
+        order: 1;
+    }
+    .order-sm-two{
+        order: 2;
     }
 }
