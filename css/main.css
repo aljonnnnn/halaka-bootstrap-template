@@ -91,6 +91,7 @@ h6{
 body{
     font-family: 'Open Sans', sans-serif;
     font-weight: 400;
+    color: var(--text-color);
 }
 
 section{
@@ -185,6 +186,11 @@ section{
     position: fixed;
     width: 100%;
     z-index: 1100;
+    transition: all 0.3s ease;
+}
+
+.header.on-scroll{
+    box-shadow: var(--nav-shadow);
 }
 
 .header .nav{
@@ -201,7 +207,7 @@ section{
     font-size: 1.875rem;
     font-weight: 600;
     text-transform: uppercase;
-    transition: all 0.3s ease;
+    transition: transform 0.3s ease;
 }
 
 .header .nav .logo:hover{
@@ -258,6 +264,7 @@ section{
     }
 
     .header .nav .nav-menu.show{
+        padding-top: 0.625rem;
         height: 100%;
     }
 
@@ -724,6 +731,60 @@ padding: 0.625rem;
 }
 
 /* Newsletter section end */
+
+/* Footer section start */
+
+.footer{
+    padding: 3.75rem 0 0.625rem;
+}
+
+.footer .footer-item .logo{
+    color: var(--black-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+
+.footer .footer-item span{
+    display: block;
+    margin-bottom: 0.9375rem;
+}
+.footer .footer-item span:last-child{
+    margin-bottom: 0;
+}
+
+.footer .footer-item .link-title{
+    font-weight: 700;
+    margin-bottom: 2re;
+}
+
+.footer .footer-item ul li{
+    margin-bottom: 0.9375rem;
+}
+
+.footer .footer-item ul li a{
+    color: var(--text-color);
+    transition: all 0.3s ease;
+}
+
+.footer .footer-item ul li a:hover{
+    color: var(--primary-color);
+    padding-left: 0.3125rem;
+}
+
+.footer .footer-item ul li:last-child{
+    margin-bottom: none;
+}
+
+.footer .credits{
+    color: var(--black-color);
+    font-family: 'Nunito', sans-serif;
+    font-size: 1rem;
+    padding: 1.25rem 0;
+    border-top: 1px solid var(--background);
+}
+/* Footer section end */
 
 /* 
 container  laptop / large tablet width 1260px
