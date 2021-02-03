@@ -668,10 +668,9 @@ padding: 0.625rem;
 
 .contact .contact-form .form-control{
     height: 3.125rem;
-    border: 1px solid var(--background);
-    /* box-shadow: var(--black-100); */
-    border-radius: 30px;
     padding: 14px 24px;
+    border: 1px solid var(--background);
+    border-radius: 30px;
     color: var(--text-color);
     background-color: var(--black-000);
     transition: all 0.5s ease;
@@ -690,6 +689,42 @@ padding: 0.625rem;
 
 
 /* Contact section end */
+
+/* Newsletter section start */
+
+.newsletter{
+    background: var(--background);
+}
+
+.newsletter .form-item{
+    border-radius: 30px;
+    background-color: var(--white-color);
+    box-shadow: var(--box-shadow);
+}
+
+.newsletter .form-item .form-control{
+    display: inline-block;
+    height: 3.125rem;
+    padding: 0.875rem 1.5rem;
+    background-color: transparent;
+    border: none;
+    width: calc(100% - 130px);
+}
+
+
+.newsletter .form-item .btn{
+    padding: 0.625rem 1.5625rem;
+    border-radius: 30px;
+    height: 3.125rem;
+}
+
+.newsletter .form-control:focus{
+    border: none;
+    box-shadow: none;
+}
+
+/* Newsletter section end */
+
 /* 
 container  laptop / large tablet width 1260px
 container small tablet 992px
