@@ -577,7 +577,6 @@ section{
     padding: 20px;
     background: var(--white-color);
     border-radius: 5px;
-    box-shadow: var(--box-shadow);
     font-family: var(--font-family-one);
 }
 
@@ -656,7 +655,6 @@ section{
 
 .faq .card{
     border: none;
-    box-shadow: var(--box-shadow);
     border-radius: 5px;
 }
 
@@ -747,7 +745,6 @@ padding: 0.625rem;
 .newsletter .form-item{
     border-radius: 30px;
     background-color: var(--white-color);
-    box-shadow: var(--box-shadow);
 }
 
 .newsletter .form-item .form-control{
@@ -826,15 +823,6 @@ padding: 0.625rem;
     border-top: 1px solid var(--background);
 }
 /* Footer section end */
-
-/* 
-container  laptop / large tablet width 1260px
-container small tablet 992px
-container large mobile 700px
-container mobile 540px
-*/
-
-
 
 @media (max-width: 992px ){
      /* margin */
