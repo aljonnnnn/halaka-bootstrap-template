@@ -1,5 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const navMenu = document.querySelector('.nav-menu');
+const logo = document.querySelector('.logo');
 
 // menu button
 hamburger.addEventListener('click', function() {
@@ -28,6 +29,7 @@ function hideMenu() {
 }
 
 navMenu.addEventListener('click', hideMenu);
+logo.addEventListener('click', hideMenu);
 
 
 // AOS Init

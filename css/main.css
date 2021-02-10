@@ -408,7 +408,44 @@ section{
     padding: 0;
 }
 
+/* dropdown icon */
+.d-icon{
+    position: relative;
+    padding-right: 30px !important;
+}
+.d-icon::after{
+    content: '\f078';
+    font-family: 'Font Awesome 5 Free';
+    font-weight: 900;
+    width: 30px;
+    height: 30px;
+    background: transparent;
+    position: absolute;
+    right: -20px;
+    top: 50%;
+    bottom: 50%;
+    
+    /* transform: translate(-50%, -50%); */
+    transition: all 0.2s ease;
+}
+
+
+
+.about-us-two button.collapsed.d-icon::after{
+    color: var(--text-color);
+    transform: translate(-50%, -50%) rotate(1deg);
+}
+
+.about-us-two button.d-icon::after{
+    color: var(--primary-color);
+    transform: translate(-100%, -50%) rotate(180deg);
+}
+
 .about-us-two button:hover{
+    color: var(--primary-color);
+}
+
+.about-us-two button:hover.d-icon::after{
     color: var(--primary-color);
 }
 
@@ -664,7 +701,6 @@ section{
     border: none;
 }
 
-
 .faq button{
     color: var(--primary-color);
     font-size: 1.125rem;
@@ -674,6 +710,16 @@ section{
 
 .faq button.collapsed{
     color: var(--text-color);
+}
+
+.faq button.collapsed.d-icon::after{
+    color: var(--text-color);
+    transform: translate(-50%, -50%) rotate(1deg);
+}
+
+.faq button.d-icon::after{
+    color: var(--primary-color);
+    transform: translate(-100%, -50%) rotate(180deg);
 }
 
 .faq button:hover{
